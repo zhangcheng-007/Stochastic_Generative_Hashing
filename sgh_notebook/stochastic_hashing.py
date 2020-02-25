@@ -63,7 +63,7 @@ def VAE_stoc_neuron(alpha, dim_input, dim_hidden, batch_size, learning_rate, max
         
         monitor = tf.nn.l2_loss(xout - x, name=None) 
         # loss = monitor + alpha * tf.reduce_sum(tf.reduce_sum(yout * tf.log(pout) + (1 - yout) * tf.log(1 - pout))) + beta * tf.nn.l2_loss(wdecode, name=None)
-        loss = monitor + alpha * tf.reduce_sum(tf.nn.sigmoid_cross_entropy_with_logits(hencode, yout)) + beta * tf.nn.l2_loss(wdecode, name=None) + beta * tf.nn.l2_loss(wencode, name=None)
+        loss = monitor + alpha * tf.reduce_sum(tf.nn.sigmoid_cross_entropy_with_logits(labels=hencode, logits=yout)) + beta * tf.nn.l2_loss(wdecode, name=None) + beta * tf.nn.l2_loss(wencode, name=None)
         
         optimizer = tf.train.AdamOptimizer(learning_rate)
         # optimizer = tf.train.RMSPropOptimizer(learning_rate)
