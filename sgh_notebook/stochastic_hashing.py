@@ -112,8 +112,8 @@ if __name__ == "__main__":
     # algorithm parameters
     dim_input = 28 * 28
     # length of bits
-    dim_hidden= int(sys.argv[1]-1) 
-    print('dim of hidden variable is %d' %(dim_hidden))
+  #   dim_hidden= int(sys.argv[1]-1) 
+  #   print('dim of hidden variable is %d' %(dim_hidden))
 
     batch_size = 500
     learning_rate = 1e-2
