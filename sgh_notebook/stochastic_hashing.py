@@ -101,8 +101,8 @@ def VAE_stoc_neuron(alpha, dim_input, dim_hidden, batch_size, learning_rate, max
 if __name__ == "__main__":
     # prepare data
     # please replace the dataset with your own directory.
-    traindata = sio.loadmat('../dataset/mnist_training.mat')
-    testdata = sio.loadmat('../dataset/mnist_test.mat')
+    traindata = sio.loadmat('/content/Stochastic_Generative_Hashing/dataset/mnist_training.mat')
+    testdata = sio.loadmat('/content/Stochastic_Generative_Hashing/dataset/mnist_test.mat')
     xtrain = traindata['Xtraining']
     xtest = testdata['Xtest']
 
