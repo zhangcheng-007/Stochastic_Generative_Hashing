@@ -74,7 +74,7 @@ def VAE_stoc_neuron(alpha, dim_input, dim_hidden, batch_size, learning_rate, max
         sess.run(tf.initialize_all_variables())
         
         train_err = []
-        for i in xrange(max_iter):
+        for i in range(max_iter):
             indx = np.random.choice(xtrain.shape[0], batch_size)
             xbatch = xtrain[indx]
             _, monitor_value, loss_value = sess.run([train_op, monitor, loss], feed_dict={x: xbatch})
